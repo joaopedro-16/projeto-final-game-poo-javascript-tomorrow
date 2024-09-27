@@ -41,41 +41,49 @@ Você possui 20 pontos de habilidades para distribuir entre os atributos: AGILID
 Escolha bem, pois não terá como refazer essa distribuição. 
 Atente-se em não digitar uma soma total maior do que 20 pontos.
 `)
-console.log('Digite o número de pontos em AGILIDADE: ')
-const agilidade = readline.questionInt()
-console.log('Digite o número de pontos em FORÇA: ')
-const forca = readline.questionInt()
-console.log('Digite o número de pontos em FURTIVIDADE: ')
-const futividade = readline.questionInt()
 
-const sobrevivente = new Sobrevivente(nomeSobrevivente, agilidade, forca, futividade)
+let sobrevivente = new Sobrevivente(nomeSobrevivente)
+while (true) {
+  try {
+    console.log('Digite o número de pontos em AGILIDADE: ')
+    sobrevivente.agilidade = readline.questionInt()
+    console.log('Digite o número de pontos em FORÇA: ')
+    sobrevivente.forca = readline.questionInt()
+    console.log('Digite o número de pontos em FURTIVIDADE: ')
+    sobrevivente.furtividade = readline.questionInt()
+    break;
+  } catch (error) {
+    console.error(error.message)
+  }  
+}
 console.log()
 console.log('O que fazer em seguida?')
 console.log()
 console.log(msgAcao1)
 let acao = readline.questionInt()
+
 while (true) {
   if (acao === 1) {
-    sobrevivente.avancar();
+    sobrevivente.avancar(corredor1);
     break;
   } else if (acao === 2) {
-    sobrevivente.procurar();
+    sobrevivente.procurar(corredor1);
     break;
   } else {
-    console.log(`Comando inválido. ${msgAcao1}`);
+    console.error(`Comando inválido.`);
+    console.log(msgAcao1)
     acao = readline.questionInt();
   }
 }
 
+if (sobrevivente.pontos_de_vida === 0) {
+  console.log();
+  console.log('Você morreu! FIM DE JOGO');
+  console.log();
+}
 
 while (sobrevivente.pontos_de_vida > 0) {
   console.log();
-
-
-  if (sobrevivente.pontos_de_vida === 0) {
-    console.log('Você morreu! FIM DE JOGO');
-    break;
-  }
   console.log('Você se aproximou de um infectado Corredor... o que você vai fazer?');
   console.log();
   console.log(msgAcao2);
@@ -91,7 +99,8 @@ while (sobrevivente.pontos_de_vida > 0) {
       sobrevivente.passarFurtivimente(corredor1);
       break;
     } else {
-      console.log(`Comando inválido. ${msgAcao2}`);
+      console.error(`Comando inválido.`);
+      console.log(msgAcao2)
       acao = readline.questionInt();
     }
   }
@@ -118,7 +127,8 @@ while (sobrevivente.pontos_de_vida > 0) {
       sobrevivente.passarFurtivimente(estalador1);
       break;
     } else {
-      console.log(`Comando inválido. ${msgAcao2}`);
+      console.error(`Comando inválido.`);
+      console.log(msgAcao2)
       acao = readline.questionInt();
     }
   }
@@ -146,7 +156,8 @@ while (sobrevivente.pontos_de_vida > 0) {
       sobrevivente.passarFurtivimente(baiacu1);
       break;
     } else {
-      console.log(`Comando inválido. ${msgAcao2}`);
+      console.error(`Comando inválido.`);
+      console.log(msgAcao2)
       acao = readline.questionInt();
     }
   }

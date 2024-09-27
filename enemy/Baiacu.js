@@ -2,21 +2,12 @@ const Infectado = require("./Infectado");
 
 class Baiacu extends Infectado {
   tipo = 'Baiacu';
-  forca = 10;
-  agilidade = 2;
-  percepcao = 4;
+  _forca = 10;
+  _agilidade = 2;
+  _percepcao = 4;
 
   constructor() {
     super()
-  }
-
-  metodo1() {
-  }
-
-  metodo2() {
-  }
-
-  metodo3() {
   }
 }
 

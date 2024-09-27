@@ -1,23 +1,33 @@
+const Sobrevivente = require("../player/Sobrevivente.js");
+
 class Infectado {
   tipo;
-  pontos_de_vida;
-  agilidade;
-  percepcao;
+  _forca;
+  _agilidade;
+  _percepcao;
 
-  constructor(tipo, pontos_de_vida, agilidade, percepcao) {
+  constructor(tipo, forca, agilidade, percepcao) {
     this.tipo = tipo 
-    this.pontos_de_vida = pontos_de_vida
-    this.agilidade = agilidade
-    this.percepcao = percepcao
+    this._forca = forca
+    this._agilidade = agilidade
+    this._percepcao = percepcao
   }
 
-  metodo1() {
+  get forca() {
+    return this._forca;
+  }
+  get agilidade() {
+    return this._agilidade;
+  }
+  get percepcao() {
+    return this._percepcao;
   }
 
-  metodo2() {
+  atacar(sobrevivente) {
+    sobrevivente.pontos_de_vida = 0
   }
-
-  metodo3() {
+  
+  modoAlerta() {
   }
 }
 
