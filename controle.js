@@ -1,4 +1,3 @@
-// comentario
 
 const readline = require("readline-sync");
 const Sobrevivente = require("./player/Sobrevivente.js");
