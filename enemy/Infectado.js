@@ -11,14 +11,16 @@ class Infectado {
     this.percepcao = percepcao
   }
 
-  metodo1() {
-  }
+  // modoAlertaOn() {
+  //   this.percepcao = this.percepcao + 3
+  // }
 
-  metodo2() {
-  }
+  // modoAlertaOff() {
+  //   this.percepcao = this.percepcao - 3
+  // }
 
-  metodo3() {
-  }
+  // metodo3() {
+  // }
 }
 
 

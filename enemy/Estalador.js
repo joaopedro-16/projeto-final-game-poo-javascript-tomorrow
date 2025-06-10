@@ -6,18 +6,18 @@ class Estalador extends Infectado {
   agilidade = 6;
   percepcao = 10;
 
-  constructor() {
-    super()
-  }
+  // constructor() {
+  //   super()
+  // }
 
-  metodo1() {
-  }
+  // metodo1() {
+  // }
 
-  metodo2() {
-  }
+  // metodo2() {
+  // }
 
-  metodo3() {
-  }
+  // metodo3() {
+  // }
 }
 
 

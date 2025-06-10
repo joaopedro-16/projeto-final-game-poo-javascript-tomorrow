@@ -50,22 +50,22 @@ const futividade = readline.questionInt()
 
 const sobrevivente = new Sobrevivente(nomeSobrevivente, agilidade, forca, futividade)
 console.log()
-console.log('O que fazer em seguida?')
-console.log()
-console.log(msgAcao1)
-let acao = readline.questionInt()
-while (true) {
-  if (acao === 1) {
-    sobrevivente.avancar();
-    break;
-  } else if (acao === 2) {
-    sobrevivente.procurar();
-    break;
-  } else {
-    console.log(`Comando inválido. ${msgAcao1}`);
-    acao = readline.questionInt();
-  }
-}
+// console.log('O que fazer em seguida?')
+// console.log()
+// console.log(msgAcao1)
+// let acao = readline.questionInt()
+// while (true) {
+//   if (acao === 1) {
+//     sobrevivente.avancar();
+//     break;
+//   } else if (acao === 2) {
+//     sobrevivente.procurar();
+//     break;
+//   } else {
+//     console.log(`Comando inválido. ${msgAcao1}`);
+//     acao = readline.questionInt();
+//   }
+// }
 
 
 while (sobrevivente.pontos_de_vida > 0) {

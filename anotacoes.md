@@ -102,3 +102,7 @@ Math.random() retorna um número decimal entre 0 e 1.
 A condição probabilidade <= chance / 10 verifica se o número aleatório está dentro dos 90% de chance.
 Se estiver, o alvo fica vermelho (modifique o estilo de um elemento DOM, neste caso com id="alvo").
 Esse código pode ser ajustado para suas necessidades.
+
+
+***Colocar um pequeno timer na realização dos resultados das ações do Game
+***No game: colocar um "Para saber mais sobre as habilidades digite: "Saber mais" e explicar sobre elas
